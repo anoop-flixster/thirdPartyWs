@@ -1,4 +1,14 @@
-This is your new Play application
-=====================================
+Represents a third party Web Service.
 
-This file will be packaged with your application, when using `play dist`.
+This Web Service is dirt simple and provides a GET endpoint and a configurable delay (in milliseconds) as paramater.
+
+The delay paramater value's used by the controller to add that delay to the API response.
+
+This implementation is done in a non-blocking manner to enable this Play service to be as scalable as possible.
+
+
+Sample API calls:
+
+- GET xxx?delay=100 => A delay of 100 ms is added to each API call by the controller
+- GET xxx?delay=1000 => A delay of 1,000 ms is added to each API call by the controller
+- GET xxx => If no delay is specified, a random delay between 0 ms and 10,000 ms is chosen for each API call.
