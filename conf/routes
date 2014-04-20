@@ -3,7 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index(delay: Integer ?= null)
+GET     /                                                   controllers.Application.index(delay: Integer ?= null)
+GET     /loaderio-e7fd122aea500955ec9347c7e2638789.txt      controllers.Application.loader()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /assets/*file                                       controllers.Assets.at(path="/public", file)

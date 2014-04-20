@@ -1,6 +1,9 @@
 
 package controllers;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Random;
 
 import javax.annotation.Nullable;
@@ -28,6 +31,11 @@ public class Application extends Controller {
                     }
                 }
                 );
+    }
+
+    public static Result loader() throws FileNotFoundException {
+        return ok(new FileInputStream(new File(
+                "loader/loaderio-e7fd122aea500955ec9347c7e2638789.txt")));
     }
 
     /**
