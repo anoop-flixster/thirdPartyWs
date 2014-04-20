@@ -6,7 +6,7 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  "com.newrelic.agent.java" % "newrelic-agent" % "2.11.0"
+  "com.newrelic.agent.java" % "newrelic-agent" % "3.5.1"
 )     
 
 play.Project.playJavaSettings
